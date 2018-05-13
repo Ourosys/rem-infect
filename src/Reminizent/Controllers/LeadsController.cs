@@ -10,14 +10,7 @@ namespace Reminizent.Controllers
     {
         public ActionResult Detail()
         {
-            if (DateTime.Today.DayOfWeek == DayOfWeek.Monday)
-            {
-                return new RedirectResult("/");
-            }
-            return new ContentResult()
-            {
-                Content = "Zack is the best"
-            };
+            return View();
         }
     }
 }
