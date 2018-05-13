@@ -8,6 +8,9 @@ namespace Reminizent.Controllers
 {
     public class LeadsController : Controller
     {
-
+        public string Detail()
+        {
+            return "Leads controller returning";
+        }
     }
 }
