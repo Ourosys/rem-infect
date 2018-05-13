@@ -8,9 +8,16 @@ namespace Reminizent.Controllers
 {
     public class LeadsController : Controller
     {
-        public string Detail()
+        public ActionResult Detail()
         {
-            return "Leads controller returning";
+            if (DateTime.Today.DayOfWeek == DayOfWeek.Monday)
+            {
+                return new RedirectResult("/");
+            }
+            return new ContentResult()
+            {
+                Content = "Zack is the best"
+            };
         }
     }
 }
